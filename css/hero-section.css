@@ -1,0 +1,445 @@
+
+/* Hero Section Styles */
+.hero {
+min-height: 100vh;
+background-color: #000;
+padding-top: 80px;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow-x: hidden;
+}
+
+.hero-container {
+max-width: 1400px;
+margin: 0 auto;
+padding: 2rem;
+display: flex;
+align-items: stretch;
+width: 100%;
+gap: 1rem;
+overflow-x: hidden;
+}
+
+.left-section {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.image-wrapper {
+display: flex;
+gap: 1rem;
+height: 600px;
+position: relative;
+}
+
+.image-fade-container {
+position: relative;
+display: inline-block;
+border-radius: 16px;
+overflow: hidden;
+border: none;
+height: 100%;
+}
+
+.image-fade-container::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+height: 80%;
+background: linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 95%);
+pointer-events: none;
+z-index: 2;
+}
+
+.portrait-img {
+height: 100%;
+width: auto;
+aspect-ratio: 9 / 16;
+object-fit: cover;
+display: block;
+}
+
+.heading-overlay {
+position: absolute;
+top: 70%;
+left: 50%;
+transform: translate(-50%, -40%);
+z-index: 10;
+width: 100%;
+padding: 0 2rem;
+text-align: left;
+}
+
+.main-heading {
+font-size: 5rem;
+font-weight: 900;
+line-height: 0.95;
+color: #fff;
+text-transform: uppercase;
+letter-spacing: -0.02em;
+margin-bottom: 1rem;
+}
+
+.subheading {
+font-size: 1rem;
+font-weight: 400;
+color: #fff;
+margin-top: 1rem;
+}
+
+.right-section {
+position: relative;
+align-items: center;
+justify-content: center;
+}
+
+.square-img {
+height: 100%;
+width: auto;
+aspect-ratio: 1 / 1;
+object-fit: cover;
+display: block;
+border-radius: 16px;
+}
+
+/* New Ingredients Section Styles */
+
+.ingredients {
+display: flex;
+justify-content: center;
+gap: 4rem;
+padding: 1rem 2rem 3rem;
+background-color: #000;
+color: #fff;
+font-family: Arial, sans-serif;
+}
+
+.ingredient-item {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.ingredient-icon {
+width: 70px;
+height: 70px;
+border: 2px solid #fff;
+border-radius: 50%;
+margin-bottom: 1rem;
+}
+
+.ingredient-text {
+font-size: 1rem;
+line-height: 1.5;
+}
+
+/* Nutrient Circles Styles */
+
+.nutrient-circles {
+position: absolute;
+bottom: 3rem;
+left: 70%;
+transform: translateX(-50%);
+display: flex;
+gap: 2rem;
+z-index: 3;
+width: 100%;
+justify-content: right;
+align-items: flex-start;
+}
+
+.nutrient-circle {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+color: #fff;
+font-family: Arial, sans-serif;
+}
+
+.nutrient-icon {
+width: 60px;
+height: 60px;
+border: 1.5px solid #fff;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 0.9rem;
+font-weight: bold;
+margin-bottom: 0.75rem;
+}
+
+.nutrient-value {
+font-size: 1.1rem;
+font-weight: bold;
+line-height: 1.2;
+}
+
+.nutrient-label {
+font-size: 0.85rem;
+font-weight: 400;
+color: #a0a0a0;
+margin-top: 0.25rem;
+}
+
+/* Responsive Styles - Mobile & Tablet Only */
+
+/* Tablet portrait (968px and below) */
+@media (max-width: 968px) {
+.hero-container { 
+flex-direction: column; 
+gap: 2rem; 
+align-items: center;
+padding: 1.5rem;
+}
+
+.left-section {
+width: 100%;
+max-width: 100%;
+}
+
+.image-wrapper { 
+height: auto;
+width: 100%;
+max-width: 100%;
+}
+
+.portrait-img {
+width: 100%;
+height: auto;
+}
+
+.right-section {
+width: 100%;
+max-width: 100%;
+display: flex;
+justify-content: center;
+}
+
+.square-img {
+width: 100%;
+height: auto;
+max-width: 100%;
+}
+
+.nutrient-circles {
+position: absolute;
+bottom: 2rem;
+left: 50%;
+transform: translateX(-50%);
+justify-content: center;
+width: auto;
+max-width: 90%;
+}
+
+.main-heading {
+font-size: 3rem;
+}
+
+.heading-overlay {
+padding: 0 1.5rem;
+}
+}
+
+/* Mobile landscape and tablet portrait (768px and below) */
+@media (max-width: 768px) {
+.hero {
+padding-top: 70px;
+}
+
+.hero-container {
+padding: 1rem;
+}
+
+.main-heading { 
+font-size: 2.5rem; 
+}
+
+.image-wrapper { 
+gap: 0.75rem;
+}
+
+.heading-overlay { 
+padding: 0 1rem;
+top: 68%;
+}
+
+.ingredients { 
+flex-direction: column; 
+align-items: center; 
+gap: 2rem;
+padding: 1rem 1.5rem 2.5rem;
+}
+
+.nutrient-circles {
+gap: 1.5rem;
+bottom: 1.5rem;
+}
+
+.nutrient-icon {
+width: 55px;
+height: 55px;
+font-size: 0.85rem;
+}
+
+.nutrient-value {
+font-size: 1rem;
+}
+
+.subheading {
+font-size: 0.9rem;
+}
+}
+
+/* Mobile portrait (480px and below) */
+@media (max-width: 480px) {
+.hero {
+padding-top: 60px;
+}
+
+.hero-container {
+padding: 0.75rem;
+gap: 1.5rem;
+}
+
+.left-section {
+width: 100%;
+}
+
+.image-wrapper {
+gap: 0.5rem;
+width: 100%;
+max-width: 100%;
+}
+
+.right-section {
+width: 100%;
+}
+
+.square-img {
+width: 100%;
+max-width: 100%;
+}
+
+.main-heading {
+font-size: 2rem;
+line-height: 1;
+}
+
+.subheading {
+font-size: 0.8rem;
+margin-top: 0.75rem;
+}
+
+.heading-overlay {
+padding: 0 0.75rem;
+top: 65%;
+}
+
+.nutrient-circles {
+gap: 1.2rem;
+bottom: 1rem;
+}
+
+.nutrient-icon {
+width: 48px;
+height: 48px;
+font-size: 0.75rem;
+}
+
+.nutrient-value {
+font-size: 0.9rem;
+}
+
+.nutrient-label {
+font-size: 0.75rem;
+}
+
+.ingredients {
+padding: 1rem 1rem 2rem;
+gap: 1.5rem;
+}
+
+.ingredient-icon {
+width: 55px;
+height: 55px;
+}
+
+.ingredient-text {
+font-size: 0.9rem;
+}
+}
+
+/* Small mobile (360px and below) */
+@media (max-width: 360px) {
+.hero-container {
+padding: 0.5rem;
+}
+
+.image-wrapper {
+gap: 0.4rem;
+width: 100%;
+}
+
+.main-heading {
+font-size: 1.6rem;
+}
+
+.subheading {
+font-size: 0.75rem;
+}
+
+.heading-overlay {
+padding: 0 0.5rem;
+top: 63%;
+}
+
+.nutrient-circles {
+gap: 1rem;
+}
+
+.nutrient-icon {
+width: 42px;
+height: 42px;
+font-size: 0.7rem;
+}
+
+.nutrient-value {
+font-size: 0.85rem;
+}
+
+.nutrient-label {
+font-size: 0.7rem;
+}
+
+.ingredient-icon {
+width: 50px;
+height: 50px;
+}
+
+.ingredient-text {
+font-size: 0.85rem;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
