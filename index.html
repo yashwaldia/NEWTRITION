@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="css/below.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/footer-section.css">
-
+  
 
 </head>
 <body>
@@ -26,23 +26,59 @@
   <!-- HERO SECTION -->
   <section class="hero-section" id="hero-section">
     <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar" id="navbar">
-      <div class="brand-logo">NEWTRITION</div>
+      <a href="index.html" class="brand-logo">NEWTRITION</a>
+      
       <ul class="nav-links">
-        <li>Home</li>
-        <li>Energy Gels</li>
-        <li>Energy Shots</li>
-        <li>Hydration Powders</li>
-        <li>Isotonic Gels</li>
-        <li>Protein Shots</li>
-        <li>About Us</li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            ENERGY SHOTS
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="product.html">NewTrition Extra Strength</a></li>
+            <li><a href="product.html">Berry Blast</a></li>
+            <li><a href="product.html">Citrus Power</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html">HYDRATION POWDERS</a></li>
+        <li><a href="index.html">ABOUT US</a></li>
       </ul>
+      
       <div class="nav-actions">
-        <button class="icon-btn search-btn">🔍</button>
-        <button class="icon-btn cart-btn">🛒<span class="cart-badge">0</span></button>
-        <button class="cta-nav-btn">Order Now</button>
+        <button class="icon-btn search-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+        <span class="nav-separator">Login/Register</span>
+        <button class="icon-btn cart-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge">0</span>
+        </button>
       </div>
     </nav>
+
+    <script>
+            // NAVBAR SCROLL EFFECT
+      const navbar = document.getElementById('navbar');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    </script>
 
     <!-- Hero Content -->
     <section class="hero">
@@ -71,18 +107,18 @@
                 <div class="nutrient-circles">
                     <!-- Nutrient Circle 1 -->
                     <div class="nutrient-circle">
-                        <div class="nutrient-icon">B50n</div>
-                        <div class="nutrient-value">250mg</div>
+                        <div class="nutrient-icon">250mg</div>
+                        <div class="nutrient-value">caffeine</div>
                     </div>
                     <!-- Nutrient Circle 2 -->
                     <div class="nutrient-circle">
-                        <div class="nutrient-icon">B110u</div>
-                        <div class="nutrient-value">1,667mg</div>
+                        <div class="nutrient-icon">1,667mg</div>
+                        <div class="nutrient-value">energy blend</div>
                     </div>
                     <!-- Nutrient Circle 3 -->
                     <div class="nutrient-circle">
-                        <div class="nutrient-icon">26nxa</div>
-                        <div class="nutrient-value">2,119mg</div>
+                        <div class="nutrient-icon">2,119mg</div>
+                        <div class="nutrient-value">high-potency </div>
                     </div>
                 </div>
             </div>
