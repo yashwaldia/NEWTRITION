@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+/* CRITICAL: PREVENT HORIZONTAL SCROLL */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
@@ -17,12 +23,14 @@ body {
 /* CONTAINER SYSTEM */
 .container {
   max-width: 1400px;
+  width: 100%; /* ADDED */
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 .container-narrow {
   max-width: 900px;
+  width: 100%; /* ADDED */
   margin: 0 auto;
   padding: 0 2rem;
 }

@@ -1,445 +1,504 @@
-
 /* Hero Section Styles */
 .hero {
-min-height: 100vh;
-background-color: #000;
-padding-top: 80px;
-display: flex;
-align-items: center;
-justify-content: center;
-overflow-x: hidden;
+  min-height: 100vh;
+  background-color: #000;
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
 }
 
 .hero-container {
-max-width: 1400px;
-margin: 0 auto;
-padding: 2rem;
-display: flex;
-align-items: stretch;
-width: 100%;
-gap: 1rem;
-overflow-x: hidden;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  gap: 1rem;
+  overflow-x: hidden;
 }
 
 .left-section {
-position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-wrapper {
-display: flex;
-gap: 1rem;
-height: 600px;
-position: relative;
+  display: flex;
+  gap: 1rem;
+  height: 600px;
+  position: relative;
 }
 
 .image-fade-container {
-position: relative;
-display: inline-block;
-border-radius: 16px;
-overflow: hidden;
-border: none;
-height: 100%;
+  position: relative;
+  display: inline-block;
+  border-radius: 16px;
+  overflow: hidden;
+  border: none;
+  height: 100%;
 }
 
 .image-fade-container::after {
-content: '';
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-height: 80%;
-background: linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 95%);
-pointer-events: none;
-z-index: 2;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 95%);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .portrait-img {
-height: 100%;
-width: auto;
-aspect-ratio: 9 / 16;
-object-fit: cover;
-display: block;
-}
-
-.heading-overlay {
-position: absolute;
-top: 70%;
-left: 50%;
-transform: translate(-50%, -40%);
-z-index: 10;
-width: 100%;
-padding: 0 2rem;
-text-align: left;
-}
-
-.main-heading {
-font-size: 5rem;
-font-weight: 900;
-line-height: 0.95;
-color: #fff;
-text-transform: uppercase;
-letter-spacing: -0.02em;
-margin-bottom: 1rem;
-}
-
-.subheading {
-font-size: 1rem;
-font-weight: 400;
-color: #fff;
-margin-top: 1rem;
+  height: 100%;
+  width: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+  border: none;
 }
 
 .right-section {
-position: relative;
-align-items: center;
-justify-content: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .square-img {
-height: 100%;
-width: auto;
-aspect-ratio: 1 / 1;
-object-fit: cover;
-display: block;
-border-radius: 16px;
+  height: 600px;
+  width: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  position: relative;
+  z-index: 1;
 }
 
-/* New Ingredients Section Styles */
+/* UPDATED: LEFT-ALIGNED HEADING OVERLAY */
+.heading-overlay {
+  position: absolute;
+  top: 70%;
+  left: 2rem; /* CHANGED: LEFT-ALIGNED */
+  transform: translateY(-50%); /* REMOVED translateX */
+  z-index: 10;
+  padding: 0 2rem 0 0; /* CHANGED: Only right padding */
+  text-align: left; /* CHANGED: LEFT-ALIGNED */
+  pointer-events: none;
+  width: auto; /* CHANGED: Auto width */
+  max-width: 90%; /* ADDED: Max width constraint */
+}
+
+/* UPDATED: LARGER LEFT-ALIGNED HEADING */
+.main-heading {
+  font-size: 4.5rem; /* INCREASED from 4rem to 4.5rem */
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  letter-spacing: -2px;
+  text-align: left; /* ADDED: LEFT-ALIGNED */
+}
+
+/* UPDATED: LARGER LEFT-ALIGNED SUBHEADING */
+.subheading {
+  font-size: 1.1rem; /* INCREASED from 1rem to 1.1rem */
+  color: #fff;
+  font-weight: 500;
+  margin-top: 1rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  letter-spacing: 3px;
+  text-align: left; /* ADDED: LEFT-ALIGNED */
+}
 
 .ingredients {
-display: flex;
-justify-content: center;
-gap: 4rem;
-padding: 1rem 2rem 3rem;
-background-color: #000;
-color: #fff;
-font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem 3rem;
+  gap: 3rem;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.ingredient-item {
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
+.ingredient {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .ingredient-icon {
-width: 70px;
-height: 70px;
-border: 2px solid #fff;
-border-radius: 50%;
-margin-bottom: 1rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
 }
 
 .ingredient-text {
-font-size: 1rem;
-line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-
-/* Nutrient Circles Styles */
 
 .nutrient-circles {
-position: absolute;
-bottom: 3rem;
-left: 70%;
-transform: translateX(-50%);
-display: flex;
-gap: 2rem;
-z-index: 3;
-width: 100%;
-justify-content: right;
-align-items: flex-start;
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  align-items: center;
+  justify-content: center;
 }
 
-.nutrient-circle {
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-color: #fff;
-font-family: Arial, sans-serif;
+.nutrient-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .nutrient-icon {
-width: 60px;
-height: 60px;
-border: 1.5px solid #fff;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 0.8rem;
-font-weight: bold;
-margin-bottom: 0.75rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .nutrient-value {
-font-size: 1.1rem;
-font-weight: bold;
-line-height: 1.2;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .nutrient-label {
-font-size: 0.85rem;
-font-weight: 400;
-color: #a0a0a0;
-margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Responsive Styles - Mobile & Tablet Only */
+/* ========================================
+   RESPONSIVE STYLES - FIXED FOR MOBILE
+======================================== */
 
 /* Tablet portrait (968px and below) */
 @media (max-width: 968px) {
-.hero-container { 
-flex-direction: column; 
-gap: 2rem; 
-align-items: center;
-padding: 1.5rem;
-}
+  .hero {
+    overflow-x: hidden;
+  }
 
-.left-section {
-width: 100%;
-max-width: 100%;
-}
+  .hero-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 1.5rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
-.image-wrapper { 
-height: auto;
-width: 100%;
-max-width: 100%;
-}
+  .left-section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
-.portrait-img {
-width: 100%;
-height: auto;
-}
+  .image-wrapper {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
-.right-section {
-width: 100%;
-max-width: 100%;
-display: flex;
-justify-content: center;
-}
+  .portrait-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
 
-.square-img {
-width: 100%;
-height: auto;
-max-width: 100%;
-}
+  .right-section {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+  }
 
-.nutrient-circles {
-position: absolute;
-bottom: 2rem;
-left: 50%;
-transform: translateX(-50%);
-justify-content: center;
-width: auto;
-max-width: 90%;
-}
+  .square-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
 
-.main-heading {
-font-size: 3rem;
-}
+  .nutrient-circles {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    width: auto;
+    max-width: 90%;
+  }
 
-.heading-overlay {
-padding: 0 1.5rem;
-}
+  /* UPDATED: LEFT-ALIGNED ON MOBILE */
+  .heading-overlay {
+    left: 1.5rem; /* LEFT-ALIGNED */
+    transform: translateY(-50%);
+    padding: 0 1.5rem 0 0;
+    max-width: 85%;
+    text-align: left; /* LEFT-ALIGNED */
+  }
+
+  .main-heading {
+    font-size: 3.5rem; /* INCREASED from 3rem */
+    text-align: left; /* LEFT-ALIGNED */
+  }
+
+  .subheading {
+    text-align: left; /* LEFT-ALIGNED */
+  }
 }
 
 /* Mobile landscape and tablet portrait (768px and below) */
 @media (max-width: 768px) {
-.hero {
-padding-top: 70px;
-}
+  .hero {
+    padding-top: 70px;
+    overflow-x: hidden;
+  }
 
-.hero-container {
-padding: 1rem;
-}
+  .hero-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
 
-.main-heading { 
-font-size: 2.5rem; 
-}
+  .main-heading {
+    font-size: 2.8rem; /* INCREASED from 2.5rem */
+    text-align: left; /* LEFT-ALIGNED */
+  }
 
-.image-wrapper { 
-gap: 0.75rem;
-}
+  .subheading {
+    font-size: 1rem; /* INCREASED from 0.9rem */
+    text-align: left; /* LEFT-ALIGNED */
+  }
 
-.heading-overlay { 
-padding: 0 1rem;
-top: 68%;
-}
+  .image-wrapper {
+    gap: 0.75rem;
+    max-width: 100%;
+  }
 
-.ingredients { 
-flex-direction: column; 
-align-items: center; 
-gap: 2rem;
-padding: 1rem 1.5rem 2.5rem;
-}
+  /* UPDATED: LEFT-ALIGNED ON MOBILE */
+  .heading-overlay {
+    padding: 0 1rem 0 0;
+    top: 68%;
+    left: 1rem; /* LEFT-ALIGNED */
+    max-width: 90%;
+    text-align: left; /* LEFT-ALIGNED */
+  }
 
-.nutrient-circles {
-gap: 1.5rem;
-bottom: 1.5rem;
-}
+  .ingredients {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 1.5rem 2.5rem;
+    max-width: 100%;
+  }
 
-.nutrient-icon {
-width: 55px;
-height: 55px;
-font-size: 0.85rem;
-}
+  .nutrient-circles {
+    gap: 1.5rem;
+    bottom: 1.5rem;
+    max-width: 85%;
+  }
 
-.nutrient-value {
-font-size: 1rem;
-}
+  .nutrient-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 0.85rem;
+  }
 
-.subheading {
-font-size: 0.9rem;
-}
+  .nutrient-value {
+    font-size: 1rem;
+  }
 }
 
 /* Mobile portrait (480px and below) */
 @media (max-width: 480px) {
-.hero {
-padding-top: 60px;
-}
+  .hero {
+    padding-top: 60px;
+    overflow-x: hidden;
+  }
 
-.hero-container {
-padding: 0.75rem;
-gap: 1.5rem;
-}
+  .hero-container {
+    padding: 0.75rem;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
 
-.left-section {
-width: 100%;
-}
+  .left-section {
+    width: 100%;
+    max-width: 100%;
+  }
 
-.image-wrapper {
-gap: 0.5rem;
-width: 100%;
-max-width: 100%;
-}
+  .image-wrapper {
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 100%;
+  }
 
-.right-section {
-width: 100%;
-}
+  .right-section {
+    width: 100%;
+    max-width: 100%;
+  }
 
-.square-img {
-width: 100%;
-max-width: 100%;
-}
+  .square-img {
+    width: 100%;
+    max-width: 100%;
+  }
 
-.main-heading {
-font-size: 2rem;
-line-height: 1;
-}
+  .main-heading {
+    font-size: 2.2rem; /* INCREASED from 2rem */
+    line-height: 1;
+    text-align: left; /* LEFT-ALIGNED */
+  }
 
-.subheading {
-font-size: 0.8rem;
-margin-top: 0.75rem;
-}
+  .subheading {
+    font-size: 0.9rem; /* INCREASED from 0.8rem */
+    margin-top: 0.75rem;
+    text-align: left; /* LEFT-ALIGNED */
+  }
 
-.heading-overlay {
-padding: 0 0.75rem;
-top: 65%;
-}
+  /* UPDATED: LEFT-ALIGNED ON MOBILE */
+  .heading-overlay {
+    padding: 0 0.75rem 0 0;
+    top: 65%;
+    left: 0.75rem; /* LEFT-ALIGNED */
+    max-width: 92%;
+    text-align: left; /* LEFT-ALIGNED */
+  }
 
-.nutrient-circles {
-gap: 1.2rem;
-bottom: 1rem;
-}
+  .nutrient-circles {
+    gap: 1.2rem;
+    bottom: 1rem;
+    max-width: 80%;
+    flex-wrap: wrap;
+  }
 
-.nutrient-icon {
-width: 48px;
-height: 48px;
-font-size: 0.75rem;
-}
+  .nutrient-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 0.75rem;
+  }
 
-.nutrient-value {
-font-size: 0.9rem;
-}
+  .nutrient-value {
+    font-size: 0.9rem;
+  }
 
-.nutrient-label {
-font-size: 0.75rem;
-}
+  .nutrient-label {
+    font-size: 0.75rem;
+  }
 
-.ingredients {
-padding: 1rem 1rem 2rem;
-gap: 1.5rem;
-}
+  .ingredients {
+    padding: 1rem 1rem 2rem;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
 
-.ingredient-icon {
-width: 55px;
-height: 55px;
-}
+  .ingredient-icon {
+    width: 55px;
+    height: 55px;
+  }
 
-.ingredient-text {
-font-size: 0.9rem;
-}
+  .ingredient-text {
+    font-size: 0.9rem;
+  }
 }
 
 /* Small mobile (360px and below) */
 @media (max-width: 360px) {
-.hero-container {
-padding: 0.5rem;
+  .hero-container {
+    padding: 0.5rem;
+    max-width: 100%;
+  }
+
+  .image-wrapper {
+    gap: 0.4rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main-heading {
+    font-size: 1.8rem; /* INCREASED from 1.6rem */
+    text-align: left; /* LEFT-ALIGNED */
+  }
+
+  .subheading {
+    font-size: 0.8rem; /* INCREASED from 0.75rem */
+    text-align: left; /* LEFT-ALIGNED */
+  }
+
+  /* UPDATED: LEFT-ALIGNED ON MOBILE */
+  .heading-overlay {
+    padding: 0 0.5rem 0 0;
+    top: 63%;
+    left: 0.5rem; /* LEFT-ALIGNED */
+    max-width: 95%;
+    text-align: left; /* LEFT-ALIGNED */
+  }
+
+  .nutrient-circles {
+    gap: 1rem;
+    max-width: 75%;
+    flex-wrap: wrap;
+  }
+
+  .nutrient-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 0.7rem;
+  }
+
+  .nutrient-value {
+    font-size: 0.85rem;
+  }
+
+  .nutrient-label {
+    font-size: 0.7rem;
+  }
+
+  .ingredient-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .ingredient-text {
+    font-size: 0.85rem;
+  }
 }
-
-.image-wrapper {
-gap: 0.4rem;
-width: 100%;
-}
-
-.main-heading {
-font-size: 1.6rem;
-}
-
-.subheading {
-font-size: 0.75rem;
-}
-
-.heading-overlay {
-padding: 0 0.5rem;
-top: 63%;
-}
-
-.nutrient-circles {
-gap: 1rem;
-}
-
-.nutrient-icon {
-width: 42px;
-height: 42px;
-font-size: 0.7rem;
-}
-
-.nutrient-value {
-font-size: 0.85rem;
-}
-
-.nutrient-label {
-font-size: 0.7rem;
-}
-
-.ingredient-icon {
-width: 50px;
-height: 50px;
-}
-
-.ingredient-text {
-font-size: 0.85rem;
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

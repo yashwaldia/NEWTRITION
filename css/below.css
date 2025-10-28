@@ -1,270 +1,329 @@
-/* Below Hero Section Styles */
+/* ========================================
+   BELOW HERO SECTION - TEXT LEFT, BOTTLE RIGHT
+======================================== */
 
+/* Main Container */
 .below-hero {
-    background-color: #000;
-    min-height: auto;
-    display: flex;
-    margin: 0 auto;
-    padding: 1rem 0 0 0;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  background-color: #000;
+  min-height: auto;
+  display: flex;
+  margin: 0 auto;
+  padding: 1rem 0 0 0;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
 }
 
 .below-container {
-    max-width: 1400px;
-    width: 100%;
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    padding: 0 2rem;
-    gap: 1rem;
-    position: relative;
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 1rem;
+  position: relative;
 }
 
-/* Blue Section - Left Side */
+/* ========================================
+   BLUE SECTION (LEFT SIDE) - LEFT ALIGNED
+======================================== */
 .blue-section {
-    flex: 0 0 35%;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
+  flex: 0 0 35%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
+/* Buy Button */
 .buy-button {
-    background: linear-gradient(135deg, #1E90FF 0%, #0066CC 100%);
-    color: #fff;
-    border: none;
-    padding: 1.5rem 4rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
+  background: linear-gradient(135deg, #1E90FF 0%, #0066CC 100%);
+  color: #fff;
+  border: none;
+  padding: 1.5rem 4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
 }
 
 .buy-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(30, 144, 255, 0.5);
-    background: linear-gradient(135deg, #2AA0FF 0%, #0077DD 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.5);
+  background: linear-gradient(135deg, #2AA0FF 0%, #0077DD 100%);
 }
 
 .buy-button:active {
-    transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
-/* Red Section - Right Side - Only Top Corners Rounded */
+/* ========================================
+   RED SECTION (RIGHT SIDE) - SQUARE BOTTOM CORNERS
+======================================== */
 .red-section {
-    flex: 0 0 calc(65% - 1rem);
-    background: linear-gradient(135deg, #FF4444 0%, #CC0000 100%);
-    height: 250px;
-    border-radius: 20px 20px 0 0;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 250px;
-    overflow: hidden;
+  flex: 0 0 calc(65% - 1rem);
+  background: linear-gradient(135deg, #FF4444 0%, #CC0000 100%);
+  height: 250px;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 3rem;
+  padding-right: 250px;
+  overflow: visible;
 }
 
-/* Tagline Text - Positioned Right of Bottle */
+/* Tagline Text - POSITIONED ON LEFT */
 .tagline-text {
-    position: relative;
-    z-index: 5;
-    margin-left: 2rem;
+  position: relative;
+  z-index: 5;
+  margin-left: 0;
+  margin-right: 2rem;
 }
 
 .tagline {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #fff;
-    text-transform: uppercase;
-    line-height: 1.1;
-    letter-spacing: 0.02em;
-    text-align: left;
-    margin: 0;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin: 0;
 }
 
-/* Bottle Container - Modern Subtle Animation */
+/* Bottle Container - DESKTOP SIZE (NORMAL) */
 .bottle-container {
-    position: absolute;
-    left: calc(50% + 80px);
-    bottom: 5px;
-    transform: translateX(-50%);
-    width: 400px;
-    height: 520px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    animation: modernFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  position: absolute;
+  right: 50px;
+  bottom: 5px;
+  width: 520px;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 120;
+  pointer-events: none;
 }
 
 .product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
 }
 
-/* Modern Subtle Entrance Animation */
-@keyframes modernFadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(30px) scale(0.95);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0) scale(1);
-    }
-}
+/* ========================================
+   RESPONSIVE - FIXED HEIGHT + BOTTLE BURSTS OUT
+======================================== */
 
-/* Responsive Styles */
-
+/* Tablets & Small Desktops */
 @media (max-width: 968px) {
-    .below-container {
-        flex-direction: column;
-        gap: 3rem;
-    }
 
-    .blue-section {
-        flex: 1;
-        width: 100%;
-    }
+  .below-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 100%;
+    overflow: visible;
+    align-items: stretch;
+  }
 
-    .red-section {
-        flex: 1;
-        width: 100%;
-        height: 220px;
-        border-radius: 20px 20px 0 0;
-        justify-content: center;
-        padding-left: 0;
-    }
+  /* BLUE SECTION (BUTTON) - ORDER 1 - LEFT ALIGNED */
+  .blue-section {
+    order: 1;
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    padding-left: 1.5rem;
+  }
 
-    .tagline-text {
-        margin-left: 0;
-    }
+  .buy-button {
+    padding: 1.25rem 3.5rem;
+    font-size: 1.1rem;
+  }
 
-    .tagline {
-        font-size: 2rem;
-        text-align: center;
-    }
+  /* RED SECTION - ORDER 2 - FIXED HEIGHT (SMALL) */
+  .red-section {
+    order: 2;
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    height: 160px; /* FIXED: Keep container SMALL */
+    border-radius: 20px 20px 0 0;
+    justify-content: flex-start;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+    position: relative;
+    overflow: visible; /* IMPORTANT: Allows bottle to burst out */
+  }
 
-    .buy-button {
-        padding: 1.25rem 3.5rem;
-        font-size: 1.1rem;
-    }
+  .tagline-text {
+    margin: 0;
+    z-index: 5;
+    max-width: 45%;
+  }
 
-    .bottle-container {
-        width: 340px;
-        height: 460px;
-        bottom: 5px;
-        left: 50%;
-    }
+  .tagline {
+    font-size: 1.2rem;
+    text-align: left;
+    line-height: 1.25;
+  }
+
+  /* BOTTLE - BURSTS OUT FROM TOP */
+  .bottle-container {
+    position: absolute;
+    right: 10px;
+    top: -150px; /* CHANGED: Bursts OUT from TOP */
+    bottom: auto;
+    left: auto;
+    width: 280px;
+    height: 420px;
+    transform: none;
+    z-index: 125;
+    pointer-events: auto;
+  }
 }
 
+/* Mobile Landscape & Tablets */
 @media (max-width: 768px) {
-    .below-hero {
-        padding: 1rem 0 0 0;
-    }
+  .below-hero {
+    padding: 1rem 0 0 0;
+  }
 
-    .red-section {
-        height: 200px;
-        border-radius: 20px 20px 0 0;
-    }
+  .below-container {
+    padding: 0 1.5rem;
+    gap: 1.5rem;
+    overflow: visible;
+  }
 
-    .tagline {
-        font-size: 1.6rem;
-    }
+  .blue-section {
+    padding-left: 0;
+    justify-content: flex-start;
+  }
 
-    .buy-button {
-        padding: 1rem 3rem;
-        font-size: 1rem;
-    }
+  /* FIXED HEIGHT */
+  .red-section {
+    height: 150px; /* FIXED: Keep SMALL */
+    padding-left: 1.25rem;
+    padding-right: 1rem;
+    border-radius: 20px 20px 0 0;
+  }
 
-    .bottle-container {
-        width: 300px;
-        height: 420px;
-        bottom: 5px;
-        left: 50%;
-    }
+  .tagline-text {
+    max-width: 44%;
+  }
 
-    @keyframes modernFadeIn {
-        0% {
-            opacity: 0;
-            transform: translateX(-50%) translateY(25px) scale(0.96);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0) scale(1);
-        }
-    }
+  .tagline {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .buy-button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+  }
+
+  /* BOTTLE BURSTS OUT */
+  .bottle-container {
+    width: 260px;
+    height: 390px;
+    right: 5px;
+    top: -140px; /* Bursts out from top */
+  }
 }
 
+/* Mobile Portrait */
 @media (max-width: 480px) {
-    .below-hero {
-        padding: 0.5rem 0 0 0;
-    }
+  .below-hero {
+    padding: 0.5rem 0 0 0;
+  }
 
-    .below-container {
-        gap: 2rem;
-        padding: 0 1rem;
-    }
+  .below-container {
+    gap: 1.5rem;
+    padding: 0 1rem;
+    overflow: visible;
+  }
 
-    .red-section {
-        height: 180px;
-        border-radius: 20px 20px 0 0;
-    }
+  .blue-section {
+    justify-content: flex-start;
+  }
 
-    .tagline {
-        font-size: 1.3rem;
-    }
+  /* FIXED HEIGHT */
+  .red-section {
+    height: 140px; /* FIXED: Keep SMALL */
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    border-radius: 20px 20px 0 0;
+  }
 
-    .buy-button {
-        padding: 0.875rem 2.5rem;
-        font-size: 0.95rem;
-    }
+  .tagline-text {
+    max-width: 42%;
+  }
 
-    .bottle-container {
-        width: 250px;
-        height: 370px;
-        bottom: 5px;
-        left: 50%;
-    }
+  .tagline {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
 
-    @keyframes modernFadeIn {
-        0% {
-            opacity: 0;
-            transform: translateX(-50%) translateY(20px) scale(0.97);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0) scale(1);
-        }
-    }
+  .buy-button {
+    padding: 0.875rem 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* BOTTLE BURSTS OUT */
+  .bottle-container {
+    width: 230px;
+    height: 350px;
+    right: 5px;
+    top: -130px; /* Bursts out from top */
+  }
 }
 
+/* Extra Small Devices */
 @media (max-width: 360px) {
-    .red-section {
-        height: 160px;
-        border-radius: 20px 20px 0 0;
-    }
+  .below-container {
+    padding: 0 0.75rem;
+    overflow: visible;
+  }
 
-    .tagline {
-        font-size: 1.1rem;
-    }
+  .blue-section {
+    justify-content: flex-start;
+  }
 
-    .buy-button {
-        padding: 0.75rem 2rem;
-        font-size: 0.85rem;
-    }
+  /* FIXED HEIGHT */
+  .red-section {
+    height: 130px; /* FIXED: Keep SMALL */
+    padding-left: 0.75rem;
+    padding-right: 0.5rem;
+    border-radius: 20px 20px 0 0;
+  }
 
-    .bottle-container {
-        width: 220px;
-        height: 340px;
-        bottom: 5px;
-        left: 50%;
-    }
+  .tagline-text {
+    max-width: 40%;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+
+  .buy-button {
+    padding: 0.75rem 2rem;
+    font-size: 0.85rem;
+  }
+
+  /* BOTTLE BURSTS OUT */
+  .bottle-container {
+    width: 200px;
+    height: 310px;
+    right: 5px;
+    top: -120px; /* Bursts out from top */
+  }
 }

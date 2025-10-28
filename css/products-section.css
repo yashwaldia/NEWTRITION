@@ -292,11 +292,13 @@
 @media (max-width: 640px) {
   .products-section {
     padding: 70px 16px;
+    overflow-x: hidden; /* FIXED: Prevent horizontal scroll on section */
   }
 
   .carousel-wrapper {
     gap: 10px;
     margin-bottom: 40px;
+    overflow: visible; /* FIXED: Allow carousel to scroll within */
   }
 
   .carousel-arrow {
@@ -308,6 +310,9 @@
   .products-grid {
     gap: 16px;
     padding: 5px 0;
+    /* FIXED: Remove conflicting overflow */
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* CRITICAL: Make product card fill almost full width minus arrows and gaps */
@@ -344,10 +349,12 @@
 @media (max-width: 480px) {
   .products-section {
     padding: 60px 12px;
+    overflow-x: hidden; /* FIXED */
   }
 
   .carousel-wrapper {
     gap: 8px;
+    overflow: visible; /* FIXED */
   }
 
   .carousel-arrow {
